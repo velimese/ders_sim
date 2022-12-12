@@ -23,7 +23,7 @@ class _AnaSyfState extends State<AnaSyf> {
           padding: EdgeInsets.all(15.0),
           child: CircleAvatar(
             radius: 90.0,
-            backgroundImage: AssetImage('assets/tup2.jpg'),
+            backgroundImage: AssetImage('assets/introo.gif'),
           ),
         ),
         Padding(
