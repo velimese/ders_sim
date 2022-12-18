@@ -1,7 +1,7 @@
-import 'package:falcikopya/biyoloji.dart';
-import 'package:falcikopya/fizik.dart';
-import 'package:falcikopya/kimya.dart';
-import 'package:falcikopya/matematik.dart';
+import 'package:ders_sim/biyoloji.dart';
+import 'package:ders_sim/fizik.dart';
+import 'package:ders_sim/kimya.dart';
+import 'package:ders_sim/matematik.dart';
 import 'package:flutter/material.dart';
 
 class AnaSyf extends StatefulWidget {
