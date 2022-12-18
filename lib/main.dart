@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Arama Sayfasi',
       style: optionStyle,
     ),
     Text(
