@@ -25,28 +25,26 @@ class _MyAppState extends State<MyApp> {
       'Index 2: School',
       style: optionStyle,
     ),
+    Text(
+      'Index 3: Deneme',
+      style: optionStyle,
+    ),
   ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          scaffoldBackgroundColor: Colors.blue, primaryColor: Colors.lightBlue),
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Color.fromARGB(57, 84, 87, 132),
-            title: const Text('Ders Sim'),
-            centerTitle: true,
-          ),
-          body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
-          bottomNavigationBar: GNav(
+        theme: ThemeData(
+            scaffoldBackgroundColor: Colors.blue,
+            primaryColor: Colors.lightBlue),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            appBar: AppBar(
+              backgroundColor: const Color.fromARGB(57, 84, 87, 132),
+              title: const Text('Ders Sim'),
+              centerTitle: true,
+            ),
+            body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
+            bottomNavigationBar: GNav(
               gap: 8,
               backgroundColor: Colors.indigo,
               color: Colors.white,
@@ -70,7 +68,13 @@ class _MyAppState extends State<MyApp> {
                   icon: Icons.person,
                   text: 'Sayfam',
                 )
-              ])),
-    );
+              ],
+              selectedIndex: _selectedIndex,
+              onTabChange: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
+            )));
   }
 }
