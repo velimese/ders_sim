@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-            scaffoldBackgroundColor: Colors.blue,
+            scaffoldBackgroundColor: Colors.lightGreenAccent,
             primaryColor: Colors.lightBlue),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
@@ -45,11 +45,17 @@ class _MyAppState extends State<MyApp> {
             ),
             body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
             bottomNavigationBar: GNav(
+              //tabBorder: Border.all(color: Colors.grey, width: 1),
+              //tabShadow: [
+              //BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)
+              //],
+              //tabActiveBorder: Border.all(color: Colors.black, width: 1),
               gap: 8,
-              backgroundColor: Colors.indigo,
-              color: Colors.white,
-              activeColor: Colors.white,
-              tabBackgroundColor: Colors.indigo.shade300,
+              iconSize: 20,
+              backgroundColor: Colors.white,
+              color: Colors.grey,
+              activeColor: Colors.purple,
+              //tabBackgroundColor: Colors.indigo.shade300,
               padding: const EdgeInsets.all(16),
               tabs: const [
                 GButton(
