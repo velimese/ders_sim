@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
       style: optionStyle,
     ),
     Text(
-      'Index 3: Deneme',
+      'Index 3: Denemee',
       style: optionStyle,
     ),
   ];
