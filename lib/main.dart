@@ -34,28 +34,40 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-            scaffoldBackgroundColor: Colors.lightGreenAccent,
-            primaryColor: Colors.lightBlue),
+          scaffoldBackgroundColor: Colors.white,
+          primaryColor: Colors.lightBlue,
+          primarySwatch: Colors.blue,
+          backgroundColor: Colors.white,
+          canvasColor: Colors.white,
+          cardColor: Colors.white,
+        ),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
-              backgroundColor: const Color.fromARGB(57, 84, 87, 132),
+              elevation: 10.0,
+              shadowColor: Colors.black,
+              flexibleSpace: Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [Colors.black, Colors.purple, Colors.yellow],
+                  ),
+                ),
+              ),
               title: const Text('Ders Sim'),
               centerTitle: true,
             ),
             body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
             bottomNavigationBar: GNav(
-              //tabBorder: Border.all(color: Colors.grey, width: 1),
-              //tabShadow: [
-              //BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)
-              //],
-              //tabActiveBorder: Border.all(color: Colors.black, width: 1),
               gap: 8,
               iconSize: 20,
-              backgroundColor: Colors.white,
-              color: Colors.grey,
+              backgroundColor: Colors.grey,
+              color: Colors.white,
               activeColor: Colors.purple,
-              //tabBackgroundColor: Colors.indigo.shade300,
+              curve: Curves.decelerate,
+              tabBackgroundGradient:
+                  const LinearGradient(colors: [Colors.white, Colors.grey]),
               padding: const EdgeInsets.all(16),
               tabs: const [
                 GButton(

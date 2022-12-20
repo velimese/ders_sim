@@ -38,7 +38,6 @@ class _AnaSyfState extends State<AnaSyf> {
                   borderRadius: BorderRadius.circular(15.0)),
               shadowColor: Colors.purple,
               margin: const EdgeInsets.symmetric(horizontal: 45.0),
-              color: Colors.white,
               child: TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -76,7 +75,6 @@ class _AnaSyfState extends State<AnaSyf> {
               elevation: 9.0,
               shadowColor: Colors.purple,
               margin: const EdgeInsets.symmetric(horizontal: 45.0),
-              color: Colors.white,
               child: TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -114,7 +112,6 @@ class _AnaSyfState extends State<AnaSyf> {
               elevation: 9.0,
               shadowColor: Colors.purple,
               margin: const EdgeInsets.symmetric(horizontal: 45.0),
-              color: Colors.white,
               child: TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -152,7 +149,6 @@ class _AnaSyfState extends State<AnaSyf> {
               elevation: 9.0,
               shadowColor: Colors.purple,
               margin: const EdgeInsets.symmetric(horizontal: 45.0),
-              color: Colors.white,
               child: TextButton(
                 onPressed: () {
                   Navigator.push(
