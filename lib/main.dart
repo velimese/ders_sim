@@ -1,3 +1,7 @@
+import 'package:ders_sim/biyoloji.dart';
+import 'package:ders_sim/fizik.dart';
+import 'package:ders_sim/kimya.dart';
+import 'package:ders_sim/matematik.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'anasayfa.dart';
@@ -17,30 +21,21 @@ class _MyAppState extends State<MyApp> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     AnaSyf(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Arama Sayfasi',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Denemee',
-      style: optionStyle,
-    ),
+    FizikSyf(),
+    KimyaSyf(),
+    BiyolojiSyf(),
+    MatematikSyf()
   ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          primaryColor: Colors.lightBlue,
-          primarySwatch: Colors.blue,
-          backgroundColor: Colors.white,
-          canvasColor: Colors.white,
-          cardColor: Colors.white,
-        ),
+            scaffoldBackgroundColor: Colors.white,
+            primaryColor: Colors.lightBlue,
+            primarySwatch: Colors.blue,
+            backgroundColor: Colors.white,
+            canvasColor: Colors.white,
+            cardColor: Colors.white),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
@@ -51,7 +46,7 @@ class _MyAppState extends State<MyApp> {
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
-                    colors: [Colors.black, Colors.purple, Colors.yellow],
+                    colors: [Colors.green, Colors.yellow],
                   ),
                 ),
               ),
@@ -62,12 +57,12 @@ class _MyAppState extends State<MyApp> {
             bottomNavigationBar: GNav(
               gap: 8,
               iconSize: 20,
-              backgroundColor: Colors.grey,
+              backgroundColor: Colors.green,
               color: Colors.white,
-              activeColor: Colors.purple,
-              curve: Curves.decelerate,
-              tabBackgroundGradient:
-                  const LinearGradient(colors: [Colors.white, Colors.grey]),
+              activeColor: Colors.yellow,
+              //curve: Curves.decelerate,
+              tabBackgroundGradient: const LinearGradient(
+                  colors: [Colors.greenAccent, Colors.black54]),
               padding: const EdgeInsets.all(16),
               tabs: const [
                 GButton(
@@ -75,17 +70,18 @@ class _MyAppState extends State<MyApp> {
                   text: 'Ana Sayfa',
                 ),
                 GButton(
-                  icon: Icons.search,
-                  text: 'Ara',
+                  icon: Icons.lightbulb_outline,
+                  text: 'Fizik',
                 ),
                 GButton(
-                  icon: Icons.settings,
-                  text: 'Ayarlar',
+                  icon: Icons.thermostat,
+                  text: 'Kimya',
                 ),
                 GButton(
-                  icon: Icons.person,
-                  text: 'Sayfam',
-                )
+                  icon: Icons.wb_sunny_rounded,
+                  text: 'Biyoloji',
+                ),
+                GButton(icon: Icons.numbers, text: 'Matematik')
               ],
               selectedIndex: _selectedIndex,
               onTabChange: (index) {
